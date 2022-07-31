@@ -1,0 +1,25 @@
+// selection sort
+#include<bits/stdc++.h>
+using namespace std;
+void selectionsort(int arr[],int n){
+    //for traversing the array i loop
+    int i,minindex,j;
+    for(i=0;i<n-1;i++){
+         minindex=i;
+    //finding the minmum value from the remaining array
+    for(j=i+1; j<n; j++)
+        if(arr[j] < arr[minindex])
+        minindex=j;
+         swap(arr[minindex],arr[i]);
+    }
+    for(int i=0;i<n;i++){
+     cout<<arr[i];
+     cout<<endl;
+    }
+}
+int main(){
+    int arr[5]={50,40,30};
+    selectionsort(arr,5);
+    // printarray(arr,5);
+    return 0;
+}
