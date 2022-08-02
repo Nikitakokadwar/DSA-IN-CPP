@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int insertionsort(int arr[],int n){
+      int i;
+     int temp;       // variable for storing the value to shift the array elements
+   
+   
+    for(int i=1;i<n;i++){    //i loop for round
+    int  j=i-1;
+    temp=arr[i];// initialize the temp with arr[i]; if i=0;arr is at 0th index
+    for(;j>=0;j--){  // loop for comparing the unsorted array  elements with the ith elements
+    if(arr[j] > temp)
+        (arr[j+1]=arr[j]) ;  //shifting the value of j by 1 position to right
+        
+        else
+            break;     //otherwise break
+        
+    }
+     arr[j+1]=temp;
+    }
+                 //if the value of i is need to compare with more than 1 time of left elements then we require this condition
+               for(int i=0;i<n;i++){
+            cout<<arr[i];
+            cout<<endl;
+        } 
+}
+int main(){
+    int arr[7]={10,1,7,4,8,2,11};
+    //function calling
+    insertionsort(arr,7);
+}
