@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+   vector<int>v(3,90);
+      cout<<"elements of v before swap"<<endl;
+      for(auto elements:v){
+      cout<<elements<<endl;
+      }
+      cout<<"elements of v1 before swap"<<endl;
+      vector<int>v1(3,50);
+      for(auto elements:v1){
+         
+         cout<<elements;
+         cout<<endl;
+      }
+       swap(v,v1);
+       cout<<"elements of v after swap"<<endl;
+       for(auto elements:v){
+         cout<<elements<<endl; 
+       }
+       cout<<"elements of v1 after swap"<<endl;
+        for(auto elements:v1){
+         cout<<elements<<endl;
+       }
+      return 0;
+   }
