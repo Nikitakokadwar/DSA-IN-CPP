@@ -1,0 +1,24 @@
+// #include<bits/stdc++.h>
+// using namespace std;
+// class stu
+// {
+//    private:
+//      int id;
+//      char name[20];
+//      public:
+//      void readstu();
+//      {
+//      cout<<"enter the student id"<<endl;
+//      cin>>id>>name;
+//       }
+//       void showstu();
+//       {
+//          cout<<id;
+//          cout<<name;
+//       }
+// };
+// int main(){
+//    stu.s;
+//    s.readstu();
+//    s.showstu();
+// }
