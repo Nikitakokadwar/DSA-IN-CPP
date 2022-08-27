@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int subarray(int arr[],int n){
+   int j;
+     int count=0;
+   for(int i=0;i<n;i++){
+    
+      for(int j=i;j<n;j++){
+         count=count+arr[j];
+         cout<<count<<endl;
+      }
+   }
+  
+      
+   
+}
+int main(){
+   int n ;
+   int arr[5]={1,2,0,7,2};
+  
+   cout<<subarray(arr,5)<<endl;
+
+}
