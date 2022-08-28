@@ -1,0 +1,107 @@
+// printing the 1 cahracter as many time as we want
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    string s;
+//   string s2(5,'N');
+//    cout<<s2<<endl;
+//    return 0;
+// }
+
+//use of getline function
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    string s;
+//    getline(cin,s);
+//    cout<<s<<endl;
+//    return 0;
+// }
+
+// //addition of two strings 
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    string s1="fam";
+//    string s2="ily";
+//    s1.append(s2);
+//    cout<<s1<<endl;
+// }
+
+
+// without using append function
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    string s1="fam";
+//    string s2="ily";
+  
+//    cout<<s1+s2<<endl;
+// }
+
+// clear the string
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    string s="abhdgjhdjhkjdkjkjsdkjd";
+//    s.clear();
+//    cout<<s<<endl;
+// }
+
+//erase the element from the string
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    string s1="nikita";
+//    s1.erase(3,3);
+//    cout<<s1<<endl;
+//    return 0;
+// }
+
+
+// finding the no from the array
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    string s1="niitjhjdh";
+//    cout<<s1.find("iit");
+//    return 0;
+// }
+
+// inserting the char in string
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    string s1="ikita";
+//    s1.insert(0,"n");
+//    cout<<s1<<endl;
+// }
+
+//adding the integer in the string
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    string s1="785";
+//    int x=stoi(s1);
+//    cout<<x+2<<endl;
+//    return 0;
+// }
+
+// adding the integer with the number
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    int x=785;
+//    cout<<to_string(x)+"2";
+//    return 0;
+// }
+
+//sorting the string
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    string s="nikita";
+//    sort(s.begin(),s.end());
+//    cout<<s<<endl;
+   
+// }
