@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+// function declaration
+bool ispresent(int arr[3][2],int key,int i ,int j){
+   for(int i=0;i<3;i++){
+      for(int j=0;j<2 ;j++){
+         if(arr[3][2]== key){
+            return 1;
+         }
+      }
+   }
+   return 0;
+}
+int main(){
+   // this code is for printing the array of 3 is to 2
+   int arr[3][2];
+   for(int i=0;i<3;i++){
+      for(int j=0;j<2;j++){
+         cin>> arr[i][j];
+      }
+   }
+   for(int i=0;i<3;i++){
+      for(int j=0;j<2;j++){
+         cout<<arr[i][j]<<" ";
+      }
+      cout<<endl;
+ }
+// this code for taking the input
+   int key;
+   cout<<"enter the key that you want to search"<<endl;
+   cin>>key;
+   //thi scode for function calling
+   if(ispresent(arr,key,3,2)){
+      cout<< " the key is present "<<endl;
+   }
+   else{
+      cout<<" the key is not present"<<endl;
+   }
+}
