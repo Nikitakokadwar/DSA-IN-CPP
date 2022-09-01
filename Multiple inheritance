@@ -1,0 +1,24 @@
+#include<bits/stdc+.h>
+using namespace std;
+class base1class(){
+public:
+baseclass1(){
+cout<<" Baseclass1 constructor called"<<endl;
+}
+};
+class baseclass2(){
+public:
+baseclass2(){
+cout<<" teh baseclass2 consteructor called"<<endl;
+}
+};
+class derivedclass:public baseclass1,public baseclass2{
+public:
+derivedclass(){
+cout<<" the derived class constructor called"<<endl;
+}
+};
+int main(){
+derivedclass derived_class;
+return 0;
+}
