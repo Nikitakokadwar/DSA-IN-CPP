@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+class A{
+public:
+void display(){
+cout<<"base class containt";
+}
+};
+class B: public A{};
+class C: public B{};
+
+int main(){
+C obj;
+obj.display();
+}
+
