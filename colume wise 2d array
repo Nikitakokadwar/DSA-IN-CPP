@@ -1,0 +1,27 @@
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    int arr[2][3];       // 2 for rows and 3 for columne
+//    for(int i=0; i<3; i++){          // take the value of columne to i
+//       for(int j=0; j<2; j++){        // take the value of row to j
+//          cin>>arr[j][i];
+//       }
+//    }
+//    // for(int i=0;i<2;i++){
+//    //    for(int j=0;j<3;j++){
+//    //       cout<<arr[i][j]<<" ";
+//    //    }
+//    //    cout<<endl;
+   
+//      for(int i=0; i<2; i++){          // take the value of columne to i
+//       for(int j=0; j<3; j++){        // take the value of row to j
+//          cin>>arr[i][j];
+//       }
+//    }
+//    for(int i=0;i<2;i++){
+//       for(int j=0;j<3;j++){
+//          cout<<arr[i][j]<<" ";
+//       }
+//       cout<<endl;
+//    }
+// }
