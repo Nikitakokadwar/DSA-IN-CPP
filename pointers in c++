@@ -1,0 +1,35 @@
+// copy the 1 pointer to another pointer
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    int num= 5;
+//    //ptr is 1st pointer
+//    int *ptr =& num;
+//    // *q is 2nd pointer
+//    int *q = ptr;   //here we copy thepointer ptr in the q pointer
+//    cout<< ptr <<" -"<< *ptr<<endl;
+//    cout<< q << " -"<< *q<<endl;
+
+// }
+
+// //coping the 1 pointer to another pointer
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    int num=5;
+//    int *ptr =&num;
+//    int *q =ptr;
+//    cout<< *q << " -"<< q <<endl;
+// }
+
+// pointer to pointer
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+   int num=5;
+   int *ptr =& num;
+   int **q = & ptr;
+   cout<< *ptr<<endl;
+   cout<<q;
+   cout<<*ptr<<endl;
+}
