@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+void update(int **ptr2){
+   *ptr2=*ptr2+1;
+}
+int main(){
+   int i=10;
+   int *ptr = &i;
+   int **ptr2= &ptr;
+   cout<<i<<endl;
+   cout<<ptr<<endl;
+   cout<<*ptr2<<endl;
+   update(ptr2);
+   cout<<"after update"<<endl;
+   cout<<i<<endl;
+   cout<<ptr<<endl;
+   cout<<*ptr2<<endl;
+   
+
+}
