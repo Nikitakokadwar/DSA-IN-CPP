@@ -1,0 +1,33 @@
+//swapping of two number without using third variable
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    int a=10;
+//    int b=20;
+//    b=b-a;   //b=10
+//    a=a+10;
+//    cout<<a<<endl;
+//    cout<<b<<endl;
+// }
+
+//typcasting the variables
+//implisite function
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    int a=10;
+//    char ch=a;
+//    cout<<ch<<endl;
+//    cout<<a<<endl;
+// }
+
+// explicit type casting
+// #incude<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    int i=10;
+//    int *p=&i;
+//    char pc =(char*)p;
+//    cout<<pc<<endl;
+//    cout<<p<<endl;
+// }
