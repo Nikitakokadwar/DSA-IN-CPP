@@ -1,0 +1,28 @@
+//use of inline function
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    int a=10,b=20;
+//    int ans=(a>b)?a:b;
+//    cout<<ans<<endl;
+// }
+
+//default argument
+// #include<bits/stdc++.h>
+// using namespace std;
+// void getarray(int arr[] , int n , int start=0 ){    // start as default argument declare inside the paranthesis
+// for(int i=start ;i<n ; i++){
+//    cout<<arr[i]<<endl;
+// }
+
+// }
+// int main(){
+//   int p=5;
+ 
+//  int arr[p]={1,2,3,4,10};
+//    getarray(arr,p);
+//    cout<<endl;
+   
+//    return 0;
+
+// }
