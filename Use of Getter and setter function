@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+class Hero{
+    int health;
+    public:
+    char level;
+int gethealth(){
+    return health;
+}
+char getlevel(){
+    return level;
+}
+void sethealth(int h){
+    health =h;
+
+}
+void setlevel(char ch){
+     level =ch;
+}
+
+};
+int main(){
+    //object
+    Hero ramesh;
+    ramesh.sethealth(40);
+    ramesh.level='A';
+   cout<<"level of ramesh"<<" "<<ramesh.getlevel()<<endl;
+   cout<<"health of ramesh"<<" "<<ramesh.gethealth()<<endl;
+}
