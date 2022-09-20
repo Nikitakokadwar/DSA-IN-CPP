@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+class abstraction{
+    private: int x,y,z;
+    public:
+    void sum(){
+        cout<<"enter two no"<<endl;
+        cin>>x>>y;
+        z=x+y;
+        cout<<z<<endl;
+    }
+};
+int main(){
+    abstraction a;
+    a.sum();
+    return 0;
+
+
+}
