@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+void digitsay(int n,string arr[]){
+// base condition
+if(n == 0)
+return ;
+// processing condition
+int digit= n%10;
+n=n/10;
+// recursion
+digitsay(n,arr);
+cout<<arr[digit]<<endl;
+
+int main(){
+int n;
+cin>>n;
+digitsay(n,arr)<<endl;
+}
