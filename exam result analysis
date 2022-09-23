@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+int result;
+int studentcount=1;
+int pass=0;
+int fail=0;
+while(studentcount<=10){
+cout<<"result==1==pass, result==0==fail"<<endl;
+if(result==1)
+pass =pass+1;
+else
+fail=fail+1;
+studentcount=studentcount+1;
+}
+cout<<"passed student"<<pass<<endl;
+cout<<"failed student"<<fail<<endl;
+if(pass>8)
+cout<<"tution"<<endl;
+}
