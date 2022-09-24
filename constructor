@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+class test{
+public:
+int id;
+// deafault constructor
+test(){
+cout<<"deafault constructor"<<endl;
+id =10;
+}
+test(int x){
+cout<<"parametrizsed constructor"<<endl;
+id=20;
+}
+};
+int main(){
+test obj1;
+cout<<obj1.id<<endl;
+test obj2(12);
+cout<<obj2.id<<endl;
+}
