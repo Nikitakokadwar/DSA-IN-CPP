@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+class encapsulation{
+private:
+int x;
+void getdata(int a){
+x=a;
+}
+void setdata(){
+return x;
+}
+};
+int main(){
+encapsulation obj;
+obj.getdata(5);
+cout<<setdata();
+}
