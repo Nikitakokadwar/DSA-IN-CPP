@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+int reachhome(int src ,int des){
+   //base case 
+   if(src=des){
+      cout<<"poch gye"<<endl;
+      return 0;
+   }
+   // processing
+   // processing 1 step increases the src by 1
+   src++;
+   //rescursion call
+   reachhome(src,des);
+}
+int main(){
+   int src=1;
+   int des=10;
+   reachhome(src,des);
+
+}
