@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool binarSearch(int arr[],int s,int e, int k){
+   //base case
+   int mid=s+(e-s)/2;
+   if(s>e){
+      return false;
+   }
+   
+   if(arr[mid]==k){
+      return true;
+   }
+   if(arr[mid]>k){
+      binarSearch(arr,s,mid-1,k);
+   }
+   else
+   binarSearch(arr,mid+1,e,k);
+}
+int main(){
+     int k=4;
+   int arr[5]={1,2,3,4,5};
+ 
+   cout<<binarSearch(arr,0,4,k);
+
+}
