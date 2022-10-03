@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+   int n;
+   cin>>n;
+   int reverse=0;
+   int temp=n;
+   while(n>0){
+      int  digit=n%10;
+      reverse=reverse*10+digit;  
+      n=n/10;
+   }
+   if(reverse==temp){
+      cout<<"the no is palindrome"<<endl;
+   }
+   else
+   cout<<"the no is not palindrome"<<endl;
+     
+cout<<reverse<<endl;
+}
