@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool ispalindroem(string str,int i,int j){
+//base case
+if(i>j){
+return true;
+}
+// second case
+if(str[i]!=str[j]){
+return false;
+}
+else
+// recusive call
+ispalindroem(str,i++,j--);
+}
+int main(){
+string name="nikita";
+// cin>>name;
+bool ans=ispalindroem(name,0,name.length());
+if(ans){
+cout<<"is palindrome"<<endl;
+}
+else
+cout<<"not a palindrome"<<endl;
+}
