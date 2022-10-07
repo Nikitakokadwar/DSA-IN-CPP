@@ -1,0 +1,67 @@
+#include<bits/stdc++.h>
+using namespace std;
+void merge(int arr[] ,int s ,int e){
+   //cut left array
+   //length of 1st array
+   int mid=(s+e)/2;
+   int leng1= mid-s+1;
+   int leng2 =e-mid;
+   //created 2 array 
+   int *first =new int[leng1];
+   int *second =new int [leng2];
+     
+     // copy the value to new array
+     // copy value of left side array part
+     int newarrayindex =s;
+     for(int i=0 ;i< leng1 ;i++){
+       first[i]= arr[newarrayindex++];
+     }
+
+     // copy the value of right side array
+    newarrayindex= mid+1;
+     for(int i=0; i<leng2 ;i++){
+      second[i]=arr[newarrayindex++];
+     }
+
+     //merge two sorted array
+     int index1 =0;
+     int index2=0;
+     newarrayindex =s;
+    while(index1 <leng1 && index2 <leng2){
+      if(first[index1]<second[index2]){
+         arr[newarrayindex++]=first[index1++];
+      }
+      else
+      arr[newarrayindex++]=second[index2++];
+      
+    }
+    while(index1 <leng1){
+      arr[newarrayindex++]=first[index1++];
+    }
+    while(index2 <leng2){
+      arr[newarrayindex++]=second[index2++];
+    }
+}
+void mergesort(int arr[],int s,int e){
+   //base case
+   if(s>=e){
+      return;
+   } 
+   int mid=(s+e)/2;
+   // sort the left part
+   mergesort(arr , s ,mid);
+   //sort the right part
+   mergesort(arr ,mid+1 ,e);
+   //merge two arrays
+   merge( arr , s,e);
+}
+int main(){
+   int arr[6]={38,27,43,3,9,12};
+   int n=6;
+   //function calling
+   mergesort(arr,0,n-1);
+   for(int i=0; i<n; i++){
+      cout<<arr[i]<<endl;
+   }
+   return 0;
+}
