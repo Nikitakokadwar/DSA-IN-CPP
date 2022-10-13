@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+class node{
+    public:
+    int data;
+    node* next;
+    // constructor
+    node(int data){
+        this->data=data;
+        this->next=NULL;
+    }
+};
+void insertathead(node* &head,int b){
+    node*temp=new node(b);
+    temp->next=head;
+    head=temp;
+    
+}
+void print(node* & head){
+    node*temp=head;
+    while(temp!=NULL){
+        cout<<temp->data<<" ";
+        temp=temp->next;
+        
+    }
+}
+void insertattail(node* & tail,int b){
+    node*temp=new node(b);
+    tail->next=temp;
+    tail=temp;
+}
+int main(){
+    node*node1=new node(98);
+    node*head=node1;
+    node*tail=node1;
+    cout<<"before"<<endl;
+    print(head);
+    insertattail(tail,50);
+    cout<<endl;
+    cout<<"after"<<endl;
+    print (head);
+    cout<<endl;
+    insertattail(tail,80);
+    print(head);
+    
+}
