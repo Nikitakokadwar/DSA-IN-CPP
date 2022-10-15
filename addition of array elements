@@ -1,0 +1,22 @@
+// printing the sum of the elements of array
+//     // #include<bits/stdc++.h>
+//     // using namespace std;
+//     // int main(){
+//     // int size;
+//     // int i; 
+//     // cout<<"insert the size of array"<<endl;
+//     // cin>>size;
+//     // cout<<"insert the elements in  array"<<endl;
+//     // // int num;
+//     // // cin>>num;
+//     // // int arr[]={2,7,1,-4,11};
+//     // int arr[100]; 
+//     //  // for indexing
+//     // int sum=0;
+//     // for(int i=0;i<size;i++){
+//     //   cin>>arr[i];
+//     //   sum=sum+arr[i];
+//     // }
+//     // cout<<sum<<endl;
+//     // return 0;
+//     // }
