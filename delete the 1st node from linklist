@@ -1,0 +1,69 @@
+#include<bits/stdc++.h>
+using namespace std;
+class node{
+    public:
+   int data;
+    node* next;
+    //constructor
+    node(int data){
+        this->data=data;
+        this->next=NULL;
+    }
+    
+};
+void createathead(node* &head,int data){
+    node*temp=new node(data);
+    temp->next=head;
+    head=temp;
+}
+void print(node*& head){
+    node*temp=head;
+    while(temp!=NULL){
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
+}
+void creatattail(node*&tail,int d){
+    node*temp=new node(d);
+    tail->next=temp;
+    tail=temp;
+}
+void deletenode(node*&head){
+    node*temp=head;
+    if(head==NULL){
+        cout<<"no node is present"<<endl;
+    }
+    else
+    temp=head;
+    head=head->next;
+    free(temp);
+    
+}
+int main(){
+   node*node1=new node(100);
+   //*temp=new node();
+  
+   node*temp=new node(200);
+   node*head=temp;
+    node*tail =temp;
+    cout<<node1->data<<endl;
+    cout<<node1->next<<endl;
+    cout<<"before"<<endl;
+    print(head);
+    createathead(head,80);
+    cout<<"after"<<endl;
+    print(head);
+    createathead(head,90);
+    cout<<endl;
+    cout<<"after"<<endl;
+    print(head);
+   creatattail(tail,60);
+   cout<<endl;
+    cout<<"after"<<endl;
+    print(head);
+    deletenode(head);
+    cout<<endl;
+    cout<<"after"<<endl;
+    print(head);
+    
+}
