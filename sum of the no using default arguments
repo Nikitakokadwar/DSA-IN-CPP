@@ -1,0 +1,27 @@
+// #include<bits/stdc++.h>
+// using namespace std;
+// int sum(int a,int b,int c=0){
+//    int ans=a+b+c;
+//  return ans;
+// }
+// int main(){
+//    int a=10,b=20,c=30;
+  
+//    cout<< sum(a,b,c)<<endl;
+//    cout<<sum(a,b)<<endl;
+// }
+
+//difference between static and constatnt variable
+// #include<bits/stdc++.h>
+// using namespace std;
+// void function(){
+//    static int counter;
+//    counter++;
+// }
+// int main(){
+  
+//  for(int i=0;i<3;i++){
+//  function();
+//  }
+
+// }
