@@ -1,0 +1,54 @@
+#include<bits/stdc++.h>
+using namespace std;
+//linkist creation using class
+class node{
+    public:
+    int data;
+    node*next;
+    // constructore
+    //use to initialize the value to the object
+    node(int data){
+        this->data=data;
+        this->next=NULL;
+    }
+};
+void inserthead(node* &head,int data){
+    node*node1=new node(data);
+    node1->next=head;
+    head=node1;
+}
+void print(node* & head){
+ node*temp=head;
+ while(temp!=NULL){
+     cout<<temp->data<<endl;
+   temp= temp->next;
+ }
+}
+ //finding the length of linklist
+ int lengthoflinkist( node* & head){
+     node*temp=head;
+     int count=0;
+     while(temp!=0){
+         count++;
+         temp=temp->next;
+     }
+     return count;
+ }
+
+int main(){
+    node*temp=new node(32);
+    node*head=temp;
+    node*l1=new node(10);
+    node*node1=new node(100);
+    cout<<temp->data<<endl;
+    cout<<temp->next<<endl;
+     // for printing the address
+    cout<<temp<<endl;
+    print(head);
+    cout<<"before"<<endl;
+    inserthead(head,90);
+    cout<<"after"<<endl;
+    print(head);
+   cout<< lengthoflinkist(head);
+    // cout<<"length of linklist"l1.length<<endl;
+}
