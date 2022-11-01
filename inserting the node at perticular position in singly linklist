@@ -1,0 +1,86 @@
+// #include<bits/stdc++.h>
+// using namespace std;
+// class node{
+//    public:
+// int data;
+// node*next=NULL;
+// //constructor
+// node(int data){
+//    this->data=data;
+//    this->next=NULL;
+// }
+// };
+// void print(node* &head){
+//    node*temp=head;
+//    while(temp!=NULL){
+//       cout<<temp->data<<" ";
+//       temp=temp->next;
+//    }
+// }
+// void insrtathead(node* &head,int d){
+//    node*temp=new node(d);
+//    temp->next=head;
+//    head=temp;
+// }
+// void insrtattail(node* &tail,int d){
+//    node*temp=new node(d);
+//    tail->next=temp;
+//    tail=temp;
+// }
+// void insrtatposition(node* &tail,node* &head,int position,int d){
+// node*nodetoinsert=new node(d);
+// //insert at head
+// if(position==1){
+//    insrtathead(head,d);
+// }
+// //insert the head at the start of the temp
+// node*temp=head;
+// int cnt=1;
+// //loop for traversing the linklist till position -1
+// while(cnt<position-1){
+//    temp=temp->next;
+//    cnt++;
+//    }
+//    //insrt at last position
+//    if(temp->next==NULL){
+//      insrtattail(tail,d);
+//    return;
+//    }
+//    // creating the node for d
+//    nodetoinsert->next=temp->next;
+//    temp->next=nodetoinsert;
+
+// }
+
+// int main(){
+//    node*node1=new node(10);
+//    node*head=node1;
+//    node*tail=node1;
+//   print(head);
+//    cout<<endl;
+//    cout<<"insert at head"<<endl;
+//    insrtathead(head,50);
+//    print(head);
+//    cout<<endl;
+//     cout<<"insert at tail"<<endl;  
+
+//    insrtattail(tail,88);
+//    print(head);
+
+//    cout<<endl;
+//     insrtattail(tail,89);
+//    print(head);
+//    cout<<endl;
+//     cout<<"insert at perticular position"<<endl;
+//    insrtatposition(tail,head,2,90);
+//    print(head);
+//    cout<<endl;
+//    // veriy where is head 
+//    cout<<"head position"<<endl;
+  
+//    cout<<head->data<<endl;
+//    //where is tail
+//    cout<<"tail position"<<endl;
+//    cout<<tail->data<<endl;
+
+// }
