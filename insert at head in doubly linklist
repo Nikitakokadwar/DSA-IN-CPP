@@ -1,0 +1,35 @@
+// insert at head in doubl linklist
+// #include<bits/stdc++.h>
+// using namespace std;
+// class node{
+//    public:
+//    int data;
+//    node*prev=NULL;
+//    node*next=NULL;
+//    //constructor
+//    node(int data){
+//       this->data=data;
+//       this->next=NULL;
+//       this->prev=NULL;
+//    }
+// };
+// void print(node* &head){
+//    node*temp=head;
+//    while(temp!=NULL){
+//       cout<<temp->data<<" ";
+//       temp=temp->next;
+//    }
+// }
+// void insertathead(node* &head,int d){
+//    node*temp=new node(d);
+//    temp->next=head;
+//    head->prev=temp;
+//    head=temp;
+// }
+// int main(){
+// node*node1=new node(99);
+// node*head=node1;
+// // print(head);
+// insertathead(head,55);
+// print(head);
+// }
