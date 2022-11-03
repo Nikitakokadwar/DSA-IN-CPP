@@ -1,0 +1,64 @@
+#include<bits/stdc++.h>
+using namespace std;
+class node{
+    public:
+    int data;
+    node*next=NULL;
+    node*previous=NULL;
+    //constructor
+    node(int data){
+        this->data=data;
+        this->next=NULL;
+        this->previous=NULL;
+    }
+};
+void insertathead(node* & head,int d){
+    node*temp=new node(d);
+    temp->next=head;
+    head=temp;
+}
+void print(node* & head){
+    node*temp=head;
+    while(temp!=NULL){
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
+}
+void insertattail(node* &tail,int d){
+    node*temp=new node(d);
+    tail->next=temp;
+    temp->previous=tail;
+    tail=temp;
+}
+void deletefromhead(node*&head){
+    node*temp=head;
+    node*current=head;
+    current=current->next;
+    head=current;
+    delete(temp);
+}
+
+int main(){
+    node*node1=new node(10);
+    node*head=node1;
+    node*tail=node1;
+    print(head);
+    cout<<endl;
+    insertathead(head,20);
+    print(head);
+    cout<<endl;
+    insertattail(tail,30);
+    print(head);
+    cout<<endl;
+    cout<<"head pointer"<<endl;
+    cout<<head->data<<endl;
+     cout<<"tail pointer"<<endl;
+    cout<<tail->data<<endl;
+    cout<<"delete the head node"<<endl;
+    deletefromhead(head);
+    print(head);
+    cout<<endl;
+    cout<<"insert at perticular position"<<endl;
+   insertatposition(head,2,55);
+    print(head);
+}
