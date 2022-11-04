@@ -1,0 +1,72 @@
+#include<bits/stdc++.h>
+using namespace std;
+class node{
+public:
+int data;
+node*next=NULL;
+//constructor
+node(int data){
+    this->data=data;
+    this->next=NULL;
+}
+};
+// using iterative approach
+// int getlength(node*&head){
+//     node*temp=head;   // initalise the temp to head node
+//     int counter=0;
+//     //loop for traversing the linklist travers till temp!=null
+//     while(temp!=NULL){
+//         temp=temp->next;
+//         counter++;
+//     }
+//     return counter;
+// }
+//using recursive approach
+int getlength(node*&head){
+   if(head==NULL){
+    return 0;
+   }
+   else{
+    return 1+getlength(head->next);
+   }
+}
+void insertathead(node*&head,int d){
+    node*temp=new node(d);
+    temp->next=head;
+    head=temp;
+}
+void insertattail(node* & tail,int d){
+    node*temp=new node(d);
+    tail->next=temp;
+    tail=temp;
+}
+void print(node*&head){
+node*temp=head;  // assign temp pointer as head
+while(temp!=NULL){
+    cout<<temp->data<<" ";
+    temp=temp->next;
+}
+
+}
+int main(){
+    node*node1=new node(99);
+    // cout<<node1->data<<endl;
+    // cout<<node1->next<<endl;
+    node*head=node1;
+    node*tail=node1;
+    print(head);
+    cout<<endl;
+    insertathead(head,98);
+    print(head);
+    cout<<endl;
+    cout<<"insertion at head"<<endl;
+    insertathead(head,97);
+    print(head);
+    cout<<endl;
+    cout<<"insertion at tail"<<endl;
+    insertattail(tail,100);
+    print(head);
+    cout<<endl;
+    cout<<"length of the linklist is"<<endl;
+     cout<<getlength(head);
+}
