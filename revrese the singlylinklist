@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+using namespace std;
+class node{
+    public:
+    int data;
+    node*next=NULL;
+    //constructor
+    node(int data){
+        this->data=data;
+        this->next=NULL;
+    }
+};
+void print(node*& head){
+    node*temp=head;
+    while(temp!=NULL){
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
+}
+void insertathead(node*&head,int d){
+    node*temp=new node(d);
+    temp->next=head;
+    head=temp;
+
+}
+node* reverse(node*&head){
+  node*prev=NULL;
+    node* current=head;
+    node* nextptr;
+    while(current!=NULL){
+        nextptr=current->next;
+        current->next=prev;
+        prev=current;
+        current=nextptr;
+    }
+    return prev;
+
+}
+int main(){
+    node*node1=new node(99);
+    node*head=node1;
+    insertathead(head,98);
+    print(head);
+    cout<<endl;
+    insertathead(head,97);
+    print(head);
+    cout<<endl;
+    node*newhead =reverse(head);
+    print(newhead);
+   
+
+}
