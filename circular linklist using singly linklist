@@ -1,0 +1,63 @@
+#include<bits/stdc++.h>
+using namespace std;
+class node{
+    public:
+int data;
+node*next=NULL;
+//constructor
+node(int data){
+    this->data=data;
+    this->next=NULL;
+}
+//destructor
+~node(){
+    int value=this->data;
+    if(this->next!=NULL){
+        delete next;
+        next=NULL;
+    }
+    cout<<"memory is free"<<value<<endl;
+}
+};
+
+void insertnode(node*&tail,int elements,int d){
+// no node is present in the linklist
+if(tail==NULL){
+    node*temp2=new node(d);
+    tail=temp2;
+    temp2->next=temp2;
+}
+else{
+    //non empty list
+    //assuming that elements are present in the linklist
+    node* current=tail;
+    while(current->data!=elements){
+          current=current->next;
+    }
+    //elements are found in the linklist
+    //create one node
+    node*temp3=new node(d);
+    temp3->next=current->next;
+    current->next=temp3; 
+}
+}
+void print(node* tail){
+    node*temp4=tail;
+    do{
+        cout<<tail->data<<" ";
+        tail=tail->next;
+    }while(tail!=temp4);
+    cout<<endl;
+}
+int main(){
+// node*temp1=new node(100);
+// node*head=temp1;
+node*tail=NULL;
+// print(head);
+insertnode(tail,5,3);
+print(tail);
+
+insertnode(tail,3,4);
+print(tail);
+return 0;
+}
