@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+   char string1[40]="mango";
+   char string2[30]="banana";
+   if(strcmp(string1,string2)==0){
+      cout<<"both strings are of same size"<<endl;
+   }
+   else{
+      cout<<" both strings are of different size"<<endl;
+   }
+}
