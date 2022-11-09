@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int largest(int arr[],int n)
+{
+int max=arr[0];
+
+for(int i=0;i<n;i++)
+    if(arr[i]>max)
+    max=arr[i];
+ return max;
+}
+int main(){
+int arr[5]={10,20,5,2,1};
+cout<<largest(arr,5);
+}
