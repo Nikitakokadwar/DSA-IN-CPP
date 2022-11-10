@@ -1,0 +1,173 @@
+// #include<bits/stdc++.h>
+// using namespace std;
+// class node{
+//     public:
+// int data;
+// node*next=NULL;
+// //constructor
+// node(int data){
+//     this->data=data;
+//     this->next=NULL;
+// }
+// //destructor
+// ~node(){
+//     int value=this->data;
+//     if(this->next!=NULL){
+//         delete next;
+//         next=NULL;
+//     }
+//     cout<<"memory is free"<<value<<endl;
+// }
+// };
+// // void print(node*head){
+// //     node*temp=head;
+// //     while(temp!=NULL){
+// //         cout<<temp->data<<endl;
+// //         temp=temp->next;
+// //     }
+// // }
+// void insertnode(node*&tail,int elements,int d){
+// // no node is present in the linklist
+// if(tail==NULL){
+//     node*temp2=new node(d);
+//     tail=temp2;
+//     temp2->next=temp2;
+// }
+// else{
+//     //non empty list
+//     //assuming that elements are present in the linklist
+//     node* current=tail;
+//     while(current->data!=elements){
+//           current=current->next;
+//     }
+//     //elements are found in the linklist
+//     //create one node
+//     node*temp3=new node(d);
+//     temp3->next=current->next;
+//     current->next=temp3; 
+// }
+// }
+// void print(node* tail){
+//     node*temp4=tail;
+//     do{
+//         cout<<tail->data<<" ";
+//         tail=tail->next;
+//     }while(tail!=temp4);
+//     cout<<endl;
+// }
+// int main(){
+// // node*temp1=new node(100);
+// // node*head=temp1;
+// node*tail=NULL;
+// // print(head);
+// insertnode(tail,5,3);
+// print(tail);
+
+// insertnode(tail,3,4);
+// print(tail);
+// insertnode(tail,4,7);
+// print(tail);
+// //insert after the 3 value 8
+// insertnode(tail,3,8);
+// print(tail);
+
+// return 0;
+// }
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+class node{
+    public:
+int data;
+node*next=NULL;
+// constructer
+node(int data){
+    this->data=data;
+    this->next=NULL;
+}
+//destructor represent using tillet oprater
+~node(){
+    int value=this->data;
+    if(this->next!=NULL){
+        delete next;
+        next=NULL;
+    }
+    cout<<"memory is free for node with data"<<value<<endl;
+}
+
+
+};
+  // print function
+    void print(node*tail){
+        node*temp3=tail;
+        do{
+            cout<<tail->data<<" ";
+            tail=tail->next;
+        } while(tail!=temp3);
+        cout<<endl;
+    }
+void deletenode(node*&tail,int value){
+// no node is present in the linklist
+//empty list
+
+if(tail==NULL){
+    cout<<"list is empty"<<endl;
+    return;
+}
+// elements are present
+else{
+    node*prev=tail;
+    node*current=prev->next;
+while(current->data!=value){
+prev=current;
+current=current->next;
+}
+prev->next=current->next;
+if(tail==current){
+    tail=prev;
+}
+current->next=NULL;
+delete current;
+}
+}
+
+void inserthead(node*&tail,int element,int d){
+    // no node is present in the linklist
+    if(tail==NULL){
+    node*temp=new node(d);
+    tail=temp;
+    temp->next=temp;
+    }
+    else{
+        node*current=tail;
+        // node is present in the linklist
+     while(current->data!=element){                //while loop till current !=element
+        current=current->next;    
+        }                   // traverse the linklist
+        node*temp2=new node(d);
+       temp2->next=current->next;
+       current->next=temp2;
+     }
+
+    }
+int main(){
+  node*tail=NULL;
+    inserthead(tail,5,3);
+    cout<<"node is inserted"<<endl;
+    print(tail);
+    cout<<"insert"<<endl;
+    inserthead(tail,3,6);
+    print(tail);
+    cout<<endl;
+    inserthead(tail,6,8);
+    print(tail);
+    cout<<endl;
+    deletenode(tail,3);
+    print(tail);
+
+
+
+
+}
