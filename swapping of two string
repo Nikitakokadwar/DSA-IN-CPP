@@ -1,0 +1,21 @@
+// swapping of two integer
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a=8;
+    int b=10;
+    swap(a,b);
+    cout<<"value of a"<<a<<endl;
+    cout<<"value of b"<<b<<endl;
+}
+
+// swapping of two string name
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+// string a="nikita";
+// string b="kokadwar";
+// swap(a,b);
+// cout<<a<<endl;
+// cout<<b<<endl;
+// }
