@@ -1,0 +1,66 @@
+#include<bits/stdc++.h>
+using namespace std;
+class node{
+    public:
+   int data;
+   node*next=NULL;
+   //constructor
+   node(int data){
+    this->data=data;
+    this->next=NULL;
+   }
+   //destructor
+   ~node(){
+    int value=this->data;
+    if(this->next!=NULL){
+        delete next;
+        this->next=NULL;
+    }
+   }
+};
+//for circular linklist we uses a tail pointer
+void inserthead(node*&tail,int element,int d){
+    // linklist is empty
+    //create 1 node
+    if(tail==NULL){
+    node*temp=new node(d);
+    //tail is pointinng to the new temp node
+   tail=temp;
+   temp->next=temp;
+    }
+    else{
+        //node is present in the linklist
+        node*current=tail;
+        while(current->data!=element){
+            current=current->next;
+        }
+        node*temp1=new node(d);
+        temp1->next=current->next;
+        current->next=temp1;
+
+    }
+}
+void print(node*tail){
+    node*temp2=tail;
+    do{
+        cout<<temp2->data<<" ";
+       temp2=temp2->next;
+    }while(temp2!=tail);
+        cout<<endl;
+    }
+
+int main(){
+ 
+    node*node1=new node(299);
+    node*tail=NULL;
+    inserthead(tail,4,5);
+    print(tail);
+    cout<<endl;
+    inserthead(tail,5,6);
+    print(tail);
+    inserthead(tail,6,7);
+    print(tail);
+    inserthead(tail,5,8);
+    print(tail);
+    
+}
