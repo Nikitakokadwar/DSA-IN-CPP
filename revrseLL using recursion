@@ -1,0 +1,63 @@
+#include<bits/stdc++.h>
+using namespace std;
+class node{
+    public:
+    int data=data;
+    node*next=NULL;
+    //constructor
+    node(int data){
+        this->data=data;
+        this->next=NULL;
+    }
+};
+node*reverse(node*head){
+    //base case
+    //if no node is present in the ll and 1 node is present in the linklist
+    if(head==NULL  || head->next==NULL){
+        return head;
+    }
+    // node is present in the linklist
+    //solve  1 case baki recursion will handle
+    node* head1=reverse(head->next);
+    // chota head means the remaning ll is shorted by the revrse fucntion
+    // we have two task 1)connect the first node to the end of the chotahead list and after2)first node next =NULL
+    //head=1st node head->next means the before reverseing the ll 2nd node is head->next
+    head->next->next=head;
+    head->next=NULL;
+    return head1;
+
+}
+void inserthead(node*&head,int d){
+    node*temp=new node(d);
+    temp->next=head;
+    head=temp;
+}
+void print(node*&head){
+    node*temp1=head;
+    while(temp1!=NULL){
+        cout<<temp1->data<<" ";
+        temp1=temp1->next;
+    }
+}
+int main(){
+    node*temp2=new node(33);
+    node*head=temp2;
+    inserthead(head,88);
+    print(head);
+    cout<<endl;
+    inserthead(head,99);
+    print(head);
+    cout<<endl;
+    inserthead(head,77);
+    print(head);
+    cout<<endl;
+    inserthead(head,66);
+    print(head);
+    cout<<endl;
+    cout<<"after revrsing the ll"<<endl;
+    node*newnode=reverse(head);
+    print(newnode);
+    // reverse(head);
+    // print(head);
+
+}
