@@ -1,0 +1,249 @@
+#include<bits/stdc++.h>
+#include<conio.h>
+#include<stdio.h>
+using namespace std;
+class node{
+    public:
+    int rollno;
+    string name;
+    float marks,per;
+    node*next;
+};
+//here we create 1 more class
+class linklist{
+public:
+node*head=NULL;
+void insert(){
+    int r;
+    string n;
+    float m;
+    cout<<"ENTER ROLL NO. : "<<endl;
+    cin>>r;
+    cout<<endl;
+    cout<<"ENTER NAME. : "<<endl;
+    cin>>n;
+    cout<<endl;
+    cout<<"ENTER MARKS.: "<<endl;
+    cin>>m;
+    cout<<endl;
+    node*temp=new node;
+    //here we putting the all data  into the variables like r,m,n variable
+    temp->rollno=r;
+    temp->name=n;
+    temp->marks=m;
+    temp->per=m/100*100;
+    temp->next=NULL;
+    //for address
+    if(head==NULL){
+        head=temp;
+    }
+    else{
+        //2nd or 3rd node
+        // for finding last node
+        node*ptr=head;
+        while(ptr->next!=NULL){
+            ptr=ptr->next;
+        }
+        ptr->next=temp;
+    }
+    cout<<"NEW NODE IS INSERTED SUCCESSFULLY..."<<endl; 
+}
+//for searching opration
+void search(){
+    // node present or not
+    if(head==NULL){
+        cout<<"LINKLIST IS EMPTY  "<<endl;
+    }
+    else{
+        int r,found=0;
+        //if found is 0 it means no record or roll no is prsent & if found =1 that means record is already present
+        cout<<"ENTER THE ROLLNO FOR SEARCH : ";
+        cin>>r;
+        node*ptr=head;
+        while(ptr!=NULL){
+            if(r==ptr->rollno){
+                cout<<"THE ROLL NO> :"<<ptr->rollno<<endl;
+                
+                cout<<"THE NAME> :"<<ptr->name<<endl;
+                cout<<"THE MARKS> :"<<ptr->marks<<endl;
+                cout<<"THE PERCENTAGE % :"<<ptr->per<<endl;
+                
+                found++;
+            }
+            ptr=ptr->next;
+        }
+        //found ==0 no record is found
+        if(found==0){
+            cout<<"SEARCH ROLL NO."<<r<<"CANT FOUND"<<endl; 
+            }
+        }
+   }
+        void count()
+        {
+            if(head==NULL){
+                cout<<"LINKLIST IS EMPTY...."<<endl;
+            }
+            else{
+                //for counting the total node
+                int c=0;
+                node*ptr=head;
+                while(ptr!=NULL){
+                    c++;
+                    ptr=ptr->next;
+                }
+                cout<<"TOTAL NO OF NODE: "<<c<<endl;
+            }
+        }
+        void update(){
+    // node present or not
+    if(head==NULL){
+        cout<<"LINKLIST IS EMPTY  "<<endl;
+    }
+    else{
+        int r,found=0;
+        //if found is 0 it means no record or roll no is prsent & if found =1 that means record is already present
+        cout<<"ENTER THE ROLLNO FOR UPDATION: ";
+        cin>>r;
+        node*ptr=head;
+        while(ptr!=NULL){
+            if(r==ptr->rollno){
+                 cin>>r;
+    cout<<endl;
+    cout<<"ENTER NEW ROLL NO. :"<<endl;
+    cin>>ptr->rollno;
+    cout<<"ENTER NAME. : "<<endl;
+    cin>>ptr->name;
+    cout<<endl;
+    cout<<"ENTER MARKS.: "<<endl;
+    cin>>ptr->marks;
+    ptr->per= ptr->marks/100*100;
+    cout<<"RECORD UPDATED SUCCESSFULLY"<<endl;
+                found++;
+            }
+            ptr=ptr->next;
+        }
+        //found ==0 no record is found
+        if(found==0){
+            cout<<"UPDATE ROLL NO."<<r<<"CANT FOUND"<<endl; 
+            }
+        }
+   }
+void del(){
+    // node present or not
+    if(head==NULL){
+        cout<<"LINKLIST IS EMPTY  "<<endl;
+    }
+    else{
+        int r,found=0;
+        //if found is 0 it means no record or roll no is prsent & if found =1 that means record is already present
+        cout<<"ENTER THE ROLLNO FOR DELETION: "<<endl ;
+        cin>>r;
+       if(r==head ->rollno){
+        //assign age wala address to the head
+        node*ptr=head;
+        head=head->next;
+        cout<<"RECORD DELETED SUCCESSFULLY"<<endl;
+        found++;
+        delete ptr;
+       }
+       else{
+        //delete 2nd or 3 not 1st
+        node*pre=head;
+        node*ptr=head->next;
+        while(ptr!=NULL){
+            if(r==ptr->rollno){
+                pre->next=ptr->next;
+                cout<<"RECORD DELETED SUCCESSFULLY..."<<endl;
+                found++;
+                delete ptr;
+                break;
+            }
+            pre=ptr;
+            ptr=ptr->next;
+        }
+
+     }
+     if(found==0){
+cout<<"DELETE ROLL NO."<<r<<"CAN'T FOUND.."<<endl;
+     }
+            
+        }
+   }
+void show(){
+    
+    // node present or not
+    if(head==NULL){
+        cout<<"LINKLIST IS EMPTY  "<<endl;
+    }
+    else{
+        int r,found=0;
+        //if found is 0 it means no record or roll no is prsent & if found =1 that means record is already present
+        
+        node*ptr=head;
+        while(ptr!=NULL){
+           
+                cout<<"THE ROLL NO> :"<<ptr->rollno<<endl;
+                
+                cout<<"THE NAME> :"<<ptr->name<<endl;
+                cout<<"THE MARKS> :"<<ptr->marks<<endl;
+                cout<<"THE PERCENTAGE % :"<<ptr->per<<endl;
+            ptr=ptr->next;
+        }
+        
+        }
+   }
+};
+int main(){
+    // here we create 1 object for class linklist
+    linklist obj;
+    p:
+    system("cls");
+    int ch;
+    //when we press the 1 that time the record is insrted in the database
+    cout<<"1.INSERT THE RECORD"<<endl;
+    //when 2 is press record get searched
+    cout<<"2.SEARCH THE RECORD"<<endl;
+    cout<<"3.COUNT THE RECORD"<<endl;
+    cout<<"4.UPDATE THE RECORD"<<endl;
+    cout<<"5.DELETE THE RECORD"<<endl;
+    cout<<"6.SHOW ALL THE RECORD"<<endl;
+    cout<<"7.EXIT"<<endl;
+    cout<<"ENTER YOUR CHOICE : ";
+    cin>>ch;
+    // here we give the choice to user after entering the ch output will be displayed accordingly
+    //switch case is used
+    switch(ch){
+        case 1:
+        system("cls");
+        obj.insert();
+        break;
+      case 2:
+        system("cls");
+        obj.search();
+        break;
+       case 3:
+        system("cls");
+        obj.count();
+        break;
+        case 4:
+        system("cls");
+        obj.update();
+        break;
+        case 5:
+        system("cls");
+        obj.del();
+        break;
+        case 6:
+        system("cls");
+        obj.show();
+        break;
+        case 7:
+            exit(0);
+            default:
+            cout<<endl<<"INVALID CHOICE PLZ TRY AGAIN"<<endl;
+    }
+    getch();
+      goto p;
+    
+
+}
