@@ -1,0 +1,70 @@
+#include<bits/stdc++.h>
+using namespace std;
+class node{
+    public:
+    int data;
+    node*next=NULL;
+    //constructor;
+    node(int data){
+        this->data=data;
+        this->next=NULL;
+    }
+};
+void inserthead(node*&head,int d){
+    node*temp1=new node(d);
+    temp1->next=head;
+    head=temp1;
+}
+void print(node*head){
+    node*temp2=head;
+    while(temp2!=NULL){
+        cout<<temp2->data<<" ";
+        temp2=temp2->next;
+    }
+}
+node* reverseknode(node*head,int k){
+    //base case no node is present inthe list 
+    if(head==NULL){
+        return NULL;
+    }
+    else{
+        // reverse the 1st k node by iterative way and join this to the revrsed linklist
+        node*curr=head;
+        node*prev=NULL;
+        node*next=NULL;
+        int count =0;
+        while(curr!=NULL && count<k){
+             next=curr->next;
+             curr->next=prev;
+             prev=curr;
+             curr=next;
+             count++;
+        }
+        //baki recursion will do
+        if(next!=NULL){
+            head->next=reverseknode(next,k);
+        }
+        return prev;
+    }
+}
+int main(){
+
+node*head=NULL;
+inserthead(head,22);
+print(head);
+cout<<endl;
+inserthead(head,33);
+print(head);
+cout<<endl;
+inserthead(head,44);
+print(head);
+cout<<endl;
+inserthead(head,55);
+print(head);
+cout<<endl;
+inserthead(head,66);
+print(head);
+cout<<endl;
+head=reverseknode(head,2);
+print(head);
+}
