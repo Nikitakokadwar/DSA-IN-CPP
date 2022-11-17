@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    //creation of stack
+    stack<int>s;
+    //push opration
+    s.push(10);
+    s.push(11);
+    s.push(12);    //10,11,12     //12,11,10
+
+    //pop opration
+    s.pop();
+    cout<<"print the stack elements"<<" "<<s.top()<<endl;
+
+}
