@@ -1,0 +1,93 @@
+#include<bits/stdc++.h>
+using namespace std;
+class node{
+    public:
+    int data;
+    node*next=NULL;
+    //constructor
+    node(int data){
+        this->data=data;
+        this->next=NULL;
+    }
+    //destructor
+    ~node(){
+    int val=this->data;
+    if(this->next!=NULL){
+      delete next;
+      this->next=NULL;
+    }
+    }
+};
+void inserthead(node*&tail,int element,int d){
+    // if no node is present in the ll
+    if(tail==NULL){
+        //create new node
+        node*temp=new node(d);
+        tail=temp;
+        temp->next=temp;
+    }
+    else{
+        //node is already prsent in the ll
+        node*current=tail;
+        while(current->data!=element){
+            current=current->next;
+        }
+        //if found 
+        //create 1 new node
+        node*temp2=new node(d);
+        temp2->next=current->next;
+        current->next=temp2;
+      
+    }
+}
+void insertbefore(node*&tail,int element,int d){
+     // if no node is present in the ll
+    if(tail==NULL){
+        //create new node
+        node*temp=new node(d);
+        tail=temp;
+        temp->next=temp;
+    }
+    else{
+        //node is already prsent in the ll
+        node*current=tail;
+        while(current->data!=element){
+            current=current->next;
+        }
+        //if found 
+        //create 1 new node
+        node*temp2=new node(d);
+        temp2->next=current->next;
+        current->next=temp2;
+       tail=temp2;
+    }
+}
+void print(node*&tail){
+    node*temp3=tail;
+    do{
+        cout<<tail->data<<" ";
+        tail=tail->next;
+    }while(tail!=temp3);
+    cout<<endl;
+}
+int main(){
+node*tail=NULL;
+inserthead(tail,9,10);
+print(tail);
+inserthead(tail,10,11);
+print(tail);
+inserthead(tail,11,12);
+print(tail);
+inserthead(tail,12,13);
+print(tail);
+inserthead(tail,13,14);
+print(tail);
+inserthead(tail,14,15);
+print(tail);
+inserthead(tail,15,16);
+print(tail);
+insertbefore(tail,16,17);
+print(tail);
+cout<<endl;
+cout<<tail->data<<endl;
+}
