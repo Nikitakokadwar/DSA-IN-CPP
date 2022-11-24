@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+#include<array>
+using namespace std;
+int main(){
+    array<int,4>a={1,2,3,4};
+    int size=a.size();
+    for(int i=0;i<size;i++){
+        cout<<a[i]<<" ";
+    }
+    cout<<endl;
+    cout<<"value at 2nd position"<<a.at(2)<<endl;
+    cout<<"the array is empty or not"<<a.empty()<<endl;
+    cout<<"front value of the array"<<a.front()<<" " <<endl;
+    cout<<"last element of array"<<" "<<a.back()<<endl;
+}
