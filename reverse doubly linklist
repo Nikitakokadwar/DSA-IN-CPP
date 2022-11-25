@@ -1,0 +1,56 @@
+#include<bits/stdc++.h>
+using namespace std;
+class node{
+    public:
+    int data;
+    node*next=NULL;
+    node*prev=NULL;
+    //constructor
+    node(int data){
+        this->data=data;
+        this->next=NULL;
+        this->prev=NULL;
+    }
+};
+void inserthead(node*&head,int d){
+    node*temp=new node(d);
+    temp->next=head;
+    head->prev=temp;
+    head=temp;
+}
+void print(node*&head){
+    node*temp1=head;
+    while(temp1!=NULL){
+        cout<<temp1->data<<" ";
+        temp1=temp1->next;
+    }
+}
+node*reverse(node*&head){
+    node*next=NULL;
+    node*prev=NULL;
+    node*current=head;
+    while(current!=NULL){
+        next=current->next;
+        
+        current->next=current->prev;
+       
+      current->prev=next;
+    }
+    
+    return prev;
+}
+int main(){
+node*temp=new node(99);
+node*head=temp;
+node*tail;
+cout<<endl;
+inserthead(head,10);
+print(head);
+cout<<endl;
+inserthead(head,88);
+print(head);
+cout<<endl;
+cout<<"after reverse opration the linklist is"<<endl;
+node*newnode=reverse(head);
+print(newnode);
+}
