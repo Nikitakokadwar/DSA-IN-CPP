@@ -1,0 +1,51 @@
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     list<int>l;
+//     l.push_back(2);
+//     l.push_back(3);
+//     l.push_back(4);
+//     for(int i:l){
+//         cout<<i<<" ";
+//     }
+// }
+
+
+
+// linklist using stl
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    list<int>l;
+   l. push_back(2);
+   l.push_back(10);
+   l.push_back(11);
+   for(int i:l){
+    cout<<i<<" ";
+   }
+    cout<<"after erase"<<endl;
+    l.erase(l.begin());
+    cout<<"after erase"<<endl;
+    for(int i:l){
+        cout<<i<<" ";
+    }
+    cout<<"before erase"<<endl;
+    l.erase(l.begin());
+    for(int i:l){
+        cout<<i<<" ";
+        cout<<"after erase"<<" ";
+    }cout<<endl;
+    l.push_front(12);
+    for(int i:l){
+        cout<<i<<" ";
+    }
+    cout<<endl;
+   //size of the list
+   cout<<"size of the list"<<l.size()<<endl;
+   //creating new list and printing the 99 5 times using the function
+   list<int>n(5,99);
+   cout<<"printing n"<<endl;
+   for(int i: n){
+    cout<<i<<" ";
+   }
+}
