@@ -1,0 +1,32 @@
+//complixity of the mapp insertion erase is log(n)
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    map<int,string>m;
+    cout<<"use of only 1st "<<endl;
+    m[90]="nikita";
+    m[1]="hsgdj";
+    m[39]="gdshgdjh";
+    for(auto i:m){
+        cout<<i.first<<endl;
+    }
+    // insert the new element in the map using another way
+    cout<<"use of 2nd"<<endl;
+    m.insert({0,"tikk"});
+    for(auto i:m){
+        cout<<i.second<<endl;    }
+        cout<<"combination of 1st and 2nd"<<endl;
+m.insert({10,"pikk"});
+for(auto i : m){
+    cout<<i.first <<" "<<i.second<<endl;
+}
+//finding the no is prsent or not
+cout<<"count"<<" "<<m.count(5)<<endl;
+// after erase
+cout<<m.erase(1)<<endl;
+cout<<"after erase"<<endl;
+for(auto i:m){
+    cout<<i.first<<endl;
+}
+
+}
