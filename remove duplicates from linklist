@@ -1,0 +1,70 @@
+#include<bits/stdc++.h>
+using namespace std;
+class node{
+    public:
+int data;
+node*next=NULL;
+//constructor
+node(int data){
+    this->data=data;
+    this->next=NULL;
+}
+//destructor
+~node(){
+    int val=this->data;
+    while(this->next!=NULL){
+        delete next;
+        next=NULL;
+    }
+}
+};
+node* duplicates(node*&head){
+    //no node prsent in the linklist
+    if(head==NULL){
+        return NULL;
+    }
+    //list is non empty
+    node*current=head;
+    while(current!=NULL){
+        if((current->next!=NULL)&&(current->data==current->next->data))
+        {
+            node*nextnode=current->next->next;
+            node*nodedelete=current->next;
+            current->next=nextnode;
+    }
+    else{
+        current=current->next;
+    }
+}
+return head;
+}
+void inserthead(node*&head,int d){
+    node*temp=new node(d);
+    temp->next=head;
+    head=temp;
+}
+void print(node*&head){
+    node*temp=head;
+    while(temp!=NULL){
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
+}
+int main(){
+node*temp1=new node(99);
+node*head=temp1;
+inserthead(head,88);
+print(head);
+inserthead(head,88);
+cout<<endl;
+print(head);
+cout<<endl;
+inserthead(head,990);
+print(head);
+cout<<endl;
+inserthead(head,100);
+print(head);
+cout<<endl;
+duplicates(head);
+print(head);
+}
