@@ -1,0 +1,87 @@
+#include<bits/stdc++.h>
+using namespace std;
+class node{
+    public:
+    int data;
+    node*next=NULL;
+    //constructor
+    node(int data){
+        this->data=data;
+        this->next=NULL;
+    }
+    //destructor
+    ~node(){
+        int value= this->data;
+        while(this->data!=NULL){
+            delete next;
+            next=NULL;
+        }
+    }
+    };
+    void inserthead(node*&head,int d){
+        node*temp=new node(d);
+        temp->next=head;
+        head=temp;
+    }
+    void print(node*&head){
+        node*temp1=head;
+        while(temp1!=NULL){
+            cout<<temp1->data<<" ";
+            temp1=temp1->next;
+        }
+    }
+    node*findingzerosonceandtwos(node*&head){
+        int zeros=0;
+        int onces=0;
+        int twos=0;
+        node*temp=head;
+        while(temp!=NULL){
+            if(temp->data==0){
+                zeros++;
+            }
+            else if(temp->data==1){
+                onces++;
+            }
+            else if(temp->data==2){
+                twos++;
+            }
+            temp=temp->next;
+        }
+        //for traversing and insrting data in the linklist
+        temp=head;
+        while(temp!=NULL){
+            if(zeros!=0){
+                temp->data=0;
+                zeros--;
+            }
+            else if(onces!=0){
+                temp->data=1;
+                onces--;
+            }
+            else if(twos!=0){
+                temp->data=2;
+                twos--;
+            }
+            temp=temp->next;
+        }
+        return head;
+    }
+int main(){
+node*temp9=new node(0);
+node*head=temp9;
+inserthead(head,1);
+print(head);
+cout<<endl;
+inserthead(head,0);
+print(head);
+cout<<endl;
+inserthead(head,0);
+print(head);
+cout<<endl;
+inserthead(head,2);
+print(head);
+cout<<endl;
+cout<<"after finding"<<endl;
+findingzerosonceandtwos(head);
+print(head);
+}
