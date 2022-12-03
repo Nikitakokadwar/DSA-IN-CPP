@@ -1,0 +1,100 @@
+#include<bits/stdc++.h>    //space complixity is o(n)  tc o(n)
+using namespace std;
+class node{
+    public:
+    int data;
+    node*next=NULL;
+    //constructor
+    node(int data)
+{
+    this->data=data;
+    this->next=NULL;
+}
+//destructor
+~node(){
+    int value=this->data;
+    while(this->data!=NULL){
+        delete next;
+        next=NULL;
+    }
+}
+};
+void inserthead(node*&head,int d){
+    node*temp=new node(d);
+    temp->next=head;
+    head=temp;
+}
+void print(node*&head){
+    node*temp2=head;
+    while(temp2!=NULL){
+        cout<<temp2->data<<" ";
+        temp2=temp2->next;
+    }
+}
+// node*reverse(node*&head){
+//     node*next=NULL;
+//     node*current=head;
+//     node*temp8=head;
+//     node*prev=NULL;
+//     while(temp8!=NULL){
+//         next=current->next;
+//         current->next=prev;
+//         prev=current;
+//         current=next;
+//     }
+//     return head;
+// }
+
+// class node2{
+//     public:
+ bool checkpalindrome(vector<int>arr){
+    int s=0;
+    int e=arr.size()-1;
+    while(s<=e){
+   if(arr[s]!=arr[e]){
+    return 0;
+   }
+   
+    s++;
+    e--;
+ }
+   return 1;
+}
+ bool ispalindrome(node*&head){
+vector<int>arr;   //here we create the array
+node*temp7=head;
+while(temp7!=NULL){
+    arr.push_back(temp7->data);
+     temp7=temp7->next;
+}
+return checkpalindrome(arr);
+}
+//};
+
+// node*ispalindromeornot(node*&head,int d){
+//     //function calling to reverse
+//     reverse(head);
+//     //function call to the insert head
+//     if(reverse(head) == inserthead(head,d)){
+//         cout <<"ll i s palindrome"<<endl; 
+//     }
+//     else{
+//         cout<<"not palindrome"<<endl;
+//     }
+// }
+int main(){
+    node*temp9=new node(1);
+    node*head=temp9;
+    inserthead(head,2);
+    print(head);
+    cout<<endl;
+    inserthead(head,2);
+    print(head);
+    cout<<endl;
+    inserthead(head,1);
+    print(head);
+    cout<<endl;
+    cout<<"after perfoeming the opration"<<endl;
+   cout<<ispalindrome(head)<<endl;
+//    print(head);
+}
