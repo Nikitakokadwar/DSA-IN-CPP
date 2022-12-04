@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+class number1
+{
+    int num1;
+    public:
+    number1(){
+        cout<<"enter the no 1"<<endl;
+        cin>>num1;
+    }
+    friend void big();
+};
+class number2{
+    int num2;
+    public:
+    number2(){
+        cout<<"enter the no 2"<<endl;
+        cin>>num2;
+    }
+    friend void big();
+};
+void big(){
+    number1 n1;
+    number2 n2;
+    if(n1.num1>n2.num2){
+        cout<<"num1 is big"<<endl;
+    }
+    else if(n2.num2>n1.num1){
+    cout<<"num2 is big"<<endl;
+    }
+    else{
+        cout<<"both are same"<<endl;
+    }
+}
+int main(){
+     big();
+}
