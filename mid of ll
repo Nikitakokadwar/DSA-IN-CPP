@@ -1,0 +1,73 @@
+#include<bits/stdc++.h>
+using namespace std;
+class node{
+    public:
+    int data;
+    node*next=NULL;
+    //consetructoe
+    node(int data){
+        this->data=data;
+        this->next=NULL;
+    }
+    //desrstuctor
+    ~node(){ 
+        int val=this->data;
+        while(this->data!=NULL){
+            delete next;
+            next=NULL;
+        }
+    }
+};
+int inserthead(node*&head,int d){
+    node*temp1=new node(d);
+    temp1->next=head;
+    head=temp1;
+}
+void print(node* &head){
+    node*temp2=head;
+    while(temp2!=NULL){
+        cout<<temp2->data<<" ";
+        temp2=temp2->next;;
+    }
+}
+int mid(node*&head){
+   node* slow=head;
+   node*fast=head;
+   if(head==NULL){
+    return -1;
+   }
+   while(fast!=NULL  ||  fast->next!=NULL){
+    
+    fast=fast->next->next;
+    slow=slow->next;
+   }
+   return slow->data;
+//    return slow1;
+}
+int main(){
+    
+node*temp3=new node(8);
+node*head=temp3;
+//node*temp=new temp;
+inserthead(head,100);
+print(head);
+cout<<endl;
+inserthead(head,99);
+print(head);
+cout<<endl;
+inserthead(head,88);
+print(head);
+cout<<endl;
+inserthead(head,77);
+print(head);
+cout<<endl;
+inserthead(head,66);
+print(head);
+cout<<endl;
+// cout<<"after mid opration"<<endl;
+
+// mid(head);
+int new1=mid(head);
+print(new1);
+}
+
