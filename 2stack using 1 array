@@ -1,0 +1,97 @@
+#include<bits/stdc++.h>
+using namespace std;
+class Stack{
+    public:
+    int *arr;
+    int size;
+    int top1;
+    int top2;
+    //constructor
+// Stack(int size){
+//     this->size=size;
+//     arr=new int[size];
+//     top1=-1;
+//     // top2=size;
+// }
+ Stack(int s){
+    this->size=s;
+    top1=-1;
+    top2=s;
+    arr=new int[s];
+}
+void push1(int element){
+    if(top2-top1 >1){
+        top1++;
+        arr[top1]=element;
+    }
+    else{
+        cout<<"stack is overflow"<<endl;
+    }
+}
+void push2(int element){
+    if(top2-top1 >1){
+        top2--;
+        arr[top2]=element;
+    }
+    else{
+        cout<<"stack is overflow"<<endl;
+    }
+}
+int pop1(){
+    if(top1>=0){
+        int ans=arr[top1];
+        top1--;
+        return ans;
+    }
+    else{
+        cout<<"stack is underflow"<<endl;
+    }
+}
+int pop2(){
+    if(top2<size){
+        int ans=arr[top2];
+        top2++;
+        return ans;
+    }
+    else{
+        cout<<"stack is underflow"<<endl;
+        return -1;
+    }
+}
+int peek1(){
+if(top1>=0){
+    return arr[top1];
+}
+else{
+    cout<<"stack is empty"<<endl;
+    return -1;
+}
+}
+int peek2(){ 
+    if(top2<size){
+        return arr[top2];
+    }
+    else{
+        return -1;
+    }
+}
+};
+int main(){
+    Stack st1(2);
+
+Stack st2(2);
+st1.push1(99);
+st2.push2(88);
+
+// cout<<twostack(6);
+cout<<"the peek element from stack 1 to insert is"<<" "<<st1.peek1()<<endl;
+cout<<"the peek element from stack 1 to insert is"<<" "<<st2.peek2()<<endl;
+st1.push1(55);
+st2.push2(84);
+cout<<"the peek element from stack 1 to insert is"<<" "<<st1.peek1()<<endl;
+cout<<"the peek element from stack 1 to insert is"<<" "<<st2.peek2()<<endl;
+st1.push1(5);
+st2.push2(8);
+cout<<"the peek element from stack 1 to insert is"<<" "<<st1.peek1()<<endl;
+cout<<"the peek element from stack 1 to insert is"<<" "<<st2.peek2()<<endl;
+}
