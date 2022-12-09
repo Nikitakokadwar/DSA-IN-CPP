@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    //1)create 1 string
+    string str="nikita";
+    stack<char>s;
+    //traverse the string till the string length
+    for(int i=0; i<str.length(); i++){
+      //insert the string inside the character
+      char ch=str[i];
+      //insert the charcter inside the stack
+      s.push(ch);
+    }
+    //create 1 empty string
+    string ans=" ";
+   
+    //create 1 while loop that iterate till the stack is not empty
+    while(!s.empty()){
+        //assign 1 charater at the top of the stack
+        char ch=s.top();
+        ans.push_back(ch);
+        s.pop();
+    }
+    cout<<"answer is "<<" "<<ans<<endl;
+}
