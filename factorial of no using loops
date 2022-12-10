@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int i,n,fact=1;
+    cout<<"plz enter the no"<<endl;
+    cin>>n;
+    if(n<0){
+        cout<<"enter no is negative no"<<endl;
+    }
+    else{
+    for(int i=1;i<=n;i++){
+        fact=fact*i;
+    }
+    }
+    cout<<fact<<endl;
+
+  return 0;
+}
