@@ -1,15 +1,23 @@
 #include<bits/stdc++.h>
 using namespace std;
+bool isprime(int n){
+    for(int i=2;i<n;i++){
+        if(n%i==0)
+        {
+            return false;
+        }
+    }
+     return true;
+}
 int main(){
+    // cout<<"hello word"<<endl;
     int n;
     cin>>n;
-    // int m=n/2;
-   // for(int i=2;i<=n;i++){
-        if(n% 2==0){
-            cout<<"no is not prime"<<endl;
-        }
-        else{
-            cout<<"no is  prime"<<endl;
-        }
-  //  }
+    if(isprime(n)){
+        cout<<"it is a prime number"<<endl;
+    }
+    else{
+        cout<<":the no is not prime"<<endl;
+    }
+
 }
