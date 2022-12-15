@@ -1,0 +1,84 @@
+#include<bits/stdc++.h>
+using namespace std;
+class Stack{
+public:
+int *arr;
+int top;
+int size;
+Stack(int size){
+top=-1;
+this->top=top;
+this->size=size;
+arr=new int [size];
+}
+void push(int element){
+if(size - top>1){
+ top++;
+ arr[top]=element;
+}
+else{
+    cout<<"stack is overflow"<<endl;
+}
+}
+void pop(){
+if(top>=-1){
+  top--;
+}
+else{
+    cout<<"stack is underflow"<<endl;
+}
+}
+bool isempty(){
+    if(top == -1){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+int peek(){
+    if(top!=0){
+      return arr[top];  
+    }
+    else{
+        cout<<"stack is empty"<<endl;
+        return -1;
+    }
+}
+void solve(stack<int>& s, int x) {
+    //base case
+    if(s.empty()) {
+        s.push(x);
+        return ;
+    }
+    
+    int num = s.top();
+    s.pop();
+    
+    //recursive call
+    solve(s, x);
+    
+    s.push(num);
+}
+
+
+stack<int> pushAtBottom(stack<int>& myStack, int x) 
+{
+    solve(myStack, x);
+    return myStack;
+}
+
+};
+int main(){
+Stack s(5);
+
+s.push(6);
+s.push(3);
+s.push(1);
+cout<<s.peek()<<endl;
+s.push(7);
+cout<<s.peek()<<endl;
+int n=10;
+
+pushAtBottom(s,n);
+}
