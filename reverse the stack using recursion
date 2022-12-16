@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+void solve(stack<int>&s , int x){
+    //base case if the stack is empty
+    if(s.empty()){
+        s.push(x);
+        return;
+    }
+    //if stack is not empty
+    //store the top element iof stack inside the num variable and pop it out
+    int num;
+    num=s.top();
+   s.pop();
+    //recursive call to the function
+    solve(s,x);
+    s.push(num);
+    
+}
+stack<int> insertatbottom(stack<int> & mystack,int x){
+    solve(mystack,x);
+    return mystack;
+}
+
+void reverseStack(stack<int> &stack) {
+    //base case if stack is empty
+    if(stack.empty()){
+        return ;
+    }
+    //if elements are present inside the stack then 
+    //store the top element of the stack inside the num //variable
+    int num = stack.top();
+    //poped ou this top element from the stack
+    stack.pop();
+    //recursive call 
+    reverseStack(stack);
+    // insertthe top element at the end of the stack
+  insertatbottom(stack,num);
+}
