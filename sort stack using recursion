@@ -1,0 +1,30 @@
+#include <bits/stdc++.h> 
+void sortedinsert(stack<int>&s,int num){
+    // 3 conditions as base case
+    if(s.empty() || (!s.empty() && s.top() <num)){// 1. if stack is
+       //push the element in the stack
+       s.push(num);
+    
+                    return;
+}
+    int n=s.top();   // store top of stack in n variable
+    //return jate time leke jao 
+    s.pop();
+    // recursive call
+    sortedinsert(s,num);
+    s.push(n);
+}
+void sortStack(stack<int> &stack)
+{
+	// Write your code here
+    //check the base case 1st
+    if(stack.empty()){
+        return;
+    }
+    //if satck is not empty
+    int num=stack.top();
+    stack.pop();//pop the top element
+        //recursive call
+        sortStack(stack);
+    sortedinsert(stack,num);//push the element back to;
+}
