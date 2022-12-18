@@ -1,0 +1,35 @@
+#include <bits/stdc++.h> 
+bool findRedundantBrackets(string &s)
+{
+ //create stack
+    stack<int>st;
+    //loop for traversing the stack 
+    for(int i=0;i<s.length();i++){
+        //character =string of i
+        char ch=s[i];
+         //if character is is open bracket or opratar asel tar
+        if(ch=='(' || ch == '+' || ch=='-'|| ch=='*' || ch== '/'){
+             //push the character into stack
+            st.push(ch); 
+        }
+        //else opening nhi mhnje closing asel kiva lower case asel
+        else{
+            bool isredandant= true;
+            if(ch==')'){//if stack is empty{
+                //if stack ch top jar opening bracket nasel topryant the while loop exicute karyach
+               // bool isredandant=true;
+                while(st.top() != '('){
+                    char top =st.top();
+                    if(top == '+' ||top =='-'|| top =='*' || top == '/')//pop the top element
+                       isredandant=false;         
+            }
+            st.pop();
+        }
+        if(isredandant == true){
+            return true;
+            st.pop();
+        }
+    }
+    }
+    return false;
+}
