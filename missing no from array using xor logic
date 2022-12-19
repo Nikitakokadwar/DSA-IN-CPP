@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int missingno(int arr[],int n){
+    int a=arr[0];
+    int b=1;
+for(int i=1;i<n;i++){
+a=a^arr[i];
+}
+for(int i=2;i<=n+1 ;i++){
+    b=b^i;
+}
+return a^b;
+}
+int main(){
+    int n=5;
+     int arr[] = { 1, 2, 3, 5 };
+     n= sizeof(arr) / sizeof(arr[0]);
+   
+//   int arr[n];
+//     arr[n]={1, 2, 3, 5 };
+    int miss=missingno(arr,n);
+    cout<<miss<<endl;
+}
