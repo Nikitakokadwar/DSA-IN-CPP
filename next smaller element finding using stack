@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+
+vector<int> nextSmallerElement(vector<int> &arr, int n)
+{
+    //create 1 stack
+    stack<int>s;
+    //push the -1 inside the stack at the end 
+    s.push(-1);
+    // creaet 1 array for storing the outpuy
+    vector<int> ans(n);
+    //create 1 loop for traversing the hole stack
+    for(int i=n-1;i>=0;i--){
+        //create 1 current ans assign it at staring of array
+        int curr=arr[i];
+        //while loop for comparing the stack top with the current element
+        while(s.top()>=curr){
+            // pop the element of the stack
+            s.pop();
+        }
+        //s.top()is greater then the current
+        //store the stack top inside the ans array
+        ans[i]=s.top();
+        //push the current inside the stack
+        s.push(curr);
+    }
+    //return the ans array
+    return ans;
+}
