@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+  bool main(){
+int a=10;
+int b=20;
+if(a>b){
+  return true;
+}
+else{
+  return false;
+}
+cout<<a<<endl;
+  cout<<"string"<<endl;
+  return 0;
+}
