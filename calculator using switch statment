@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a=40;
+    int b=20;
+    char op;
+    cout<<"enter the oprator"<<endl;
+    cin>>op;
+    switch(op){
+        case '+':
+        cout<<"addition of two no"<<" "<<a+b;
+        break;
+         case '-':
+        cout<<"subtraction of two no "<<" "<<a,b;
+        break;
+        case '/':
+        cout<<"division of two no is"<<" "<<a/b;
+        break;
+        case '*':
+        cout<<"multiplication of two no is"<<" "<<a*b;
+        break;
+    }
+   
+}
