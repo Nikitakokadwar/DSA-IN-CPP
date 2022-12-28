@@ -1,0 +1,33 @@
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     string fruits="apple";
+//     // string fru=&fruits;
+//    // cout<<fru<<endl;
+//     // cout<<&fruits<<endl;
+//     string *ptr=&fruits;
+//     cout<<ptr<<endl;
+//     cout<<*ptr<<endl;
+//     cout<<&ptr<<endl;
+// }
+// #include<bits/stdc++.h>
+// using namespace std;
+// int mainfunction(string name){
+//     cout<<name<<"kokadwar"<<endl;
+// }
+// int main(){
+// mainfunction("nikita");
+// mainfunction("nitin");
+// }
+#include<bits/stdc++.h>
+using namespace std;
+void mainfunction (string name,int age){
+    cout<<"name is "<<name<<"age is "<<age<<endl;
+}
+int main(){
+    mainfunction("nikita",20);
+    mainfunction("nitin",50);
+    mainfunction("unmesh",25);
+    mainfunction("nilesh",26);
+
+}
