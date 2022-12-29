@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+class car{
+    public:
+   //function declareation inside the class
+   string day="good";
+   void car1(){
+    cout<<"car is ..."<<endl;
+   }
+};
+//derive the class from the existing class
+class door: public car{
+ public:
+//function creation inside the class
+
+void car2(){
+    
+    cout<<"wow beautiful"<<endl;
+}
+string model="day";
+};
+int main(){
+    //create the obj for derived class
+    door myobj;
+    myobj.car1();
+    myobj.car2();
+   cout<<myobj.day+ " "+myobj.model<<endl;
+}
