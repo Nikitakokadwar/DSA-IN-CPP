@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+class animal{
+    public:
+    void animalsound(){
+        cout<<"  animal.."<<endl;
+    }
+};
+class dog{
+    public:
+    void animalsound(){
+        cout<<"im dog"<<endl;
+    }
+};
+class cat{
+    public:
+    void animalsound(){
+        cout<<"i know barking.."<<endl;
+    };
+};
+int main(){
+    animal animal1;
+    dog dog1;
+    cat cat1;
+    animal1.animalsound();
+   dog1.animalsound();
+   cat1.animalsound();
+
+}
