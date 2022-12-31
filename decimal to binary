@@ -1,0 +1,16 @@
+//decimal to binary
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n=10;
+    int ans;
+    int binary=0;int product=1;int remainder=1;
+    while(n!=0){
+     remainder=n%2;
+     binary=binary+(remainder*product);
+     n=n/2;
+     product*=10;
+    }
+    // cout<<"hello";
+    cout<<binary;
+}
