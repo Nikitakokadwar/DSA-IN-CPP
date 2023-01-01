@@ -1,0 +1,25 @@
+//using 1 structure we represent 2 objects
+#include<bits/stdc++.h>
+using namespace std;
+struct car{
+    string name;
+    string brand;
+    int prize;
+};
+int main(){
+    //call the object
+    car car1;   // here car1 is object from car structure
+    car1.name="swipe";
+    car1.brand="zdi";
+    car1.prize=10;
+     
+     car car2;  // car2 is object from car structure
+     //here we use two object from 1 structure
+     car2.name="nayno";
+     car2.brand="indica";
+     car2.prize=20;
+     cout<<car1.name <<" "<<car1.brand <<" "<<car1.prize<<endl;
+     cout<<car2.name<<" "<<car2.brand<<" "<<car2.prize;
+
+
+}
