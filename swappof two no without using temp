@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a=10;
+    int b=20;
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    cout<<"value of a after swapping the no is"<<a<<endl;
+    cout<<"value of the b after swapping is"<<b<<endl;
+
+}
