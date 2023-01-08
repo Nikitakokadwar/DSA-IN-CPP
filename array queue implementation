@@ -1,0 +1,66 @@
+//queue implementation using array
+//steps to implement the queue using array
+/*step1: create 1 queue class 
+step2: front and rare for enqueue and dequeue opration*/
+#include<bits/stdc++.h>
+using namespace std;
+class queue1(){
+    public:
+    int rare;
+    int front;
+    int *arr;
+    int size;
+    //create 1 constructor of queue
+    queue(int size){
+        front=rare=-1;
+        this->size=size;
+        queue=new int;
+    }
+    
+
+void enqueue(int data){
+    //check whether the queue is full or not
+    if(rare==size){
+        cout<<"stack is full"<<endl;
+    }
+    else{
+        //insert the element inside the queue from rare end
+        arr[rare]=data;
+        rare++;
+    }
+}
+void dequeue(){
+    //check if the stack is empty or not
+    if(front==rare){
+        cout<<"stack is empty"<<endl;
+    }
+    else{
+        //pop the element from the stack
+       arr[front] = -1;
+        front++;
+        if(front==rare){
+            front=0;
+            rare=0;
+        }
+    }
+}
+void display(){
+    if(front==rare){
+        cout<<"stack is empty"<<endl;
+    }
+    else{
+        cout<<"elements of queue"<<endl;
+        for(int i=front;i<=rare ;i++){
+            cout<<queue[i]<<endl;
+        }
+    }
+}
+};
+int main(void){
+queue1 q;
+q.enqueue(20);
+q.enqueue(30);
+q.enqueue(70);
+
+q.display();
+}
