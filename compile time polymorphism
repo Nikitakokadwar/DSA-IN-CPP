@@ -1,0 +1,25 @@
+//it has same function name but different values are their inside the functions.
+#include<bits/stdc++.h>
+using namespace std;
+class poly{
+    public:
+void ni(int x){
+    cout<<"value of x is "<<x<<endl;
+}
+void ni(double y){
+    cout<<"value ofy is"<<y<<endl;
+}
+void ni (int x,int y){
+  cout<<"value of x and y is"<<x<<y<<endl;
+}
+};
+
+int main(){
+//create obj of class 
+poly p;
+p.ni(10);
+p.ni(12.3);
+p.ni(10,20);
+return 0;
+
+}
