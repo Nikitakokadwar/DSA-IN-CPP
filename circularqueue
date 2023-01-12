@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+using namespace std;
+class queue1{
+    public:
+    int front;
+    int rare;
+    int *arr;
+    int size;
+    //constructor
+    queue1(int size){
+        this->size=size;
+        front=rare=-1;
+        arr=new int;
+    }
+    int push(int data){
+        //check if the queue is full or not
+        if((front==0 && rare==size-1) || (rare==(front-1)%(size-1))){
+            cout<<"the queue is full "<<endl;
+            return false;
+        }
+        else  if(front==-1){
+            //front=1 means we insert the 1st element in the  queue
+
+                front=rare=0;
+                arr[rare]=data;
+                rare++;
+            }
+            else if(rare=size-1 && front!=0){
+                rare=0;
+                arr[rare]=data;
+            }
+            else{
+                rare++;
+                arr[rare]=data;
+            }
+        }
+    
+    void display(){
+        for(int i=front;i<rare;i++){
+            cout<<arr[i]<<" ";
+        }
+    }
+};
+int main(){
+    queue1 q(3);
+    q.push(99);
+    q.display();
+
+}
