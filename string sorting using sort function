@@ -1,0 +1,10 @@
+#include<bits/stdc++.h>
+using namespace std;
+void sortstring(string s){
+    sort(s.begin(),s.end());
+    cout<<s;
+}
+int main(){
+    string s="geeksforgeeks";
+    sortstring(s);
+}
