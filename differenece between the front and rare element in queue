@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    //create 1 queue using stl function
+    queue<int>q;
+    q.push(11);
+    q.push(12);
+    q.push(13);
+    q.push(14);
+    q.push(15);
+    // cout<<q.front()<<endl;
+    // cout<<q.back()<<endl;
+    if(q.front()>q.back()){
+        cout<<"front end is greater"<<endl;
+        cout<<q.front()-q.back();
+    }
+    else{
+        cout<<"rare end is greater"<<endl;
+       cout<< q.back()-q.front();
+    }
+}
