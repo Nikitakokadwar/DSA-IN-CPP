@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    deque<int>d;
+    d.push_front(99);
+    d.push_back(88);
+    cout<<d.front()<<endl;
+    cout<<d.back()<<endl;
+    cout<<"after  front 99 pop"<<endl;
+    d.pop_front();
+    cout<<endl;
+    cout<<d.front()<<endl;
+    cout<<d.back()<<endl;
+    cout<<"after second pop"<<endl;
+    d.pop_back();
+   //now queue is empty
+   if(d.empty()){
+    cout<<"the queue is empty"<<endl;
+   }
+   else{
+    cout<<"queue is not empty"<<endl;
+   }
+}
