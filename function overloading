@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+void  add(int a,int b){
+cout<< a+b;
+}
+void  add(int c,int d){
+    cout<<c+d;
+}
+int main(){
+    add(3,2);
+    cout<<endl;
+    add(5,6);
+    return 0;
+
+}
