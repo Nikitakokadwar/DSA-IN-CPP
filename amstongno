@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int num;
+    cout<<"enter the no "<<endl;
+    cin>>num;
+    int originalno=num;
+    int remainder=0;
+    int result=0;
+    while(originalno!=0){
+    remainder =originalno % 10;
+   result +=remainder*remainder*remainder;
+    originalno= originalno / 10;
+    }
+    if(result == num){
+        cout<<"the no is amstrong number"<<endl;
+    }
+    else{
+        cout<<"no is not amstrong no"<<endl;
+    }
+    
+
+}
