@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a;
+    
+     long e;
+    char c;
+    float b;
+    double d;
+   cout<<"eneter the input"<<endl;
+
+    cin>>a;
+    cin>>b;
+    cin>>c;
+    cin>>d;
+    cin>>e;
+    cout<<a<<endl;
+   
+    cout<<c<<endl;
+    cout<<e<<endl;
+    cout<<fixed<<setprecision(3)<<b<<endl;
+    cout<<fixed<<setprecision(9)<<d<<endl;
+}
