@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+void reversequeue(queue<int> &q){
+    stack<int>s;
+    while(!q.empty()){
+        s.push(q.front());
+        q.pop();
+    }
+    while(!s.empty()){
+        q.push(s.top());
+        s.pop();
+    }
+}
+void print(queue<int>q){
+    while(!q.empty()){
+cout<<q.front()<<" ";
+q.pop();
+    }
+}
+int main(){
+    queue<int>q;
+    q.push(10);
+    q.push(20);
+    q.push(30);
+    q.push(40);
+    reversequeue(q);
+    print(q);
+
+}
