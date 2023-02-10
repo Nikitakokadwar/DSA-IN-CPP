@@ -1,0 +1,37 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+queue<int> kelement(queue<int>q,int k){
+    stack<int>s;
+    //use for loop travese till k element
+    for(int i=0;i<k;i++){
+        //pop the element from the queue and push inside the stack
+        s.push(q.front());
+        q.pop();
+    }//till stack is not empty
+    while(!s.empty()){
+    //pop the element from the stack and push inside the queue
+    q.push(s.top());
+    s.pop();
+    }
+    //fetch the element from the last and put it to front
+    int t=q.size()-k;
+    while(t--){
+        q.push(q.front());
+        q.pop();
+    }
+    return q;
+}
+int main(){
+    int k=2;
+    queue<int>q;
+    q.push(10);
+    q.push(20);
+    q.push(30);
+    q.push(40);
+   q=kelement(q,k);
+    while(!q.empty()){
+        cout<<q.front()<<endl;
+        q.pop();
+    }
+}
