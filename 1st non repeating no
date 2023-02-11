@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+string firstnonrepeating(string a){
+    //create 1 hash map for counting the which character is repeating
+    //counting the repeating factor we use the map
+    unordered_map<char,int>count;
+    //create 1 queue for storing the element
+    queue<int>q;
+      //create 1 ans variable for storing the non repeating element
+      string ans="";
+    //for loop for traversing the whole string
+    for(int i=0;i<a.length();i++){
+      char ch=a[i];
+      //increase the count by 1
+      count[ch]++;
+      //push  the character inside the queue
+      q.push(ch);
+      while(!q.empty()){
+      if(count[q.front()]>1){
+        //greater than 1 means no is repeated so pop it out
+        q.pop();
+      }
+      else{
+        //store the ans inside the ans variable
+        ans.push_back(q.front());
+        break;
+      }
+      }
+      //here we come bec 1 our queue is empty
+      //or break kela
+      if(q.empty())
+      ans.push_back('#');
+    }
+    return ans;
+}
+int main(){
+    string a="nikita";
+    string ans=firstnonrepeating(a);
+    cout<<ans;
+
+
+}
