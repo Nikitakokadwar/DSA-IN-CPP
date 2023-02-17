@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+//create 1 node class
+class node{
+    public:
+    int data;
+    node* left;
+    node* right;
+    //create 1 constructor to insert the data
+    node(int d){
+        this->data=d;
+        //1st ly insert the null inside the left of tree
+        this->left = NULL;
+        // null in the right part of the tree
+        this->right=NULL;
+    }
+};
+//create 1 function for building the tree
+node* builtree(node* root){
+    //create 1 root node
+    cout<<"Enter the data: "<<endl;
+    int data;
+    cin>>data;
+    //create 1 root node and pass the data inside it 
+    //so the constructor is called and  left right
+    //all are intilised
+    root=new node(data);
+     
+    if(data == -1){
+        return NULL;
+    }
+    //here we use the recursion solve 1 case 
+    //recursion will handle all other cases
+    cout<<"enter the data for inserting in left "<<data<<endl;
+    root->left=builtree(root->left);
+    //after come at last insert in left part
+    cout<<"enter the data for inserting in right"<<data<<endl;
+    root->right= builtree(root->right);
+    return root;
+}
+int main(){
+    node*root= NULL;
+    //creating a tree
+    root=builtree(root);
+
+}
